@@ -1,6 +1,6 @@
 # LandingPage
 
-LandingPage CSS HTML
+LandingPage explore button and right hand corner overview of website 
 
 ## TODO
 
