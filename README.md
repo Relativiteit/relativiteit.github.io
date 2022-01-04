@@ -1,6 +1,7 @@
 # LandingPage
 
 LandingPage explore button and right hand corner overview of website 
+Extend with React 
 
 ## TODO
 
