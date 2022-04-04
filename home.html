@@ -7,20 +7,42 @@
     <link rel="stylesheet" href="style.css" />
     <title>KantoRobotics</title>
   </head>
+  <body>
+    <section class="showcase">
+      <header>
+        <h2 class="logo" href="index.html">KantoRobotics</h2>
 
-  <div class="text">
-    <h2>Home</h2>
-    <h3>With The Help Of AI</h3>
-    <p>This is the homepage what would you like to do here.</p>
-  </div>
-  <div class="menu">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="news.html">News</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="robots.html">Robots</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </div>
+        <div class="toggle"></div>
+      </header>
+      <div class="overlay"></div>
+
+      <div class="text">
+        <h2>Home</h2>
+        <h3>With The Help Of AI</h3>
+        <p>This is the homepage what would you like to do here.</p>
+        <a href="projects.html">Explore</a>
+      </div>
+    </section>
+
+    <div class="menu">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="robots.html">Robots</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <script>
+      const menuToggle = document.querySelector('.toggle')
+      const showcase = document.querySelector('.showcase')
+
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active')
+        showcase.classList.toggle('active')
+      })
+    </script>
+  </body>
 </html>

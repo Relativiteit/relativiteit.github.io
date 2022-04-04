@@ -26,10 +26,12 @@
     transition: 0.5s;
 }
 
+
 .showcase.active{
     right: 300px;
 
 }
+
 .showcase header{
     position: absolute;
     top: 0;
@@ -42,6 +44,7 @@
     justify-content: space-between;
 
 }
+
 .logo{
     text-transform: uppercase;
     cursor: pointer;
