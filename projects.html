@@ -10,34 +10,39 @@
   <body>
     <section class="showcase">
       <header>
-        <h2 class="logo">KantoRobotics</h2>
+        <h2 class="logo" href="index.html">KantoRobotics</h2>
+
         <div class="toggle"></div>
       </header>
+      <div class="overlay"></div>
+
       <div class="text">
-        <h3>Current projects</h3>
-
-        <p>These are the projects the team is currently working on. </p>
+        <h2>Projects</h2>
+        <h3>Current Projects</h3>
+        <p>This is the homepage what would you like to do here.</p>
+        <a href="projects.html">Explore</a>
       </div>
-      </section>
-      <div class="menu">
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="news.html">News</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="robots.html">Robots</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
+    </section>
 
-      <script>
-        const menuToggle = document.querySelector('.toggle')
-        const showcase = document.querySelector('.showcase')
+    <div class="menu">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="robots.html">Robots</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
 
-        menuToggle.addEventListener('click', () => {
-          menuToggle.classList.toggle('active')
-          showcase.classList.toggle('active')
-        })
-      </script>
+    <script>
+      const menuToggle = document.querySelector('.toggle')
+      const showcase = document.querySelector('.showcase')
+
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active')
+        showcase.classList.toggle('active')
+      })
+    </script>
   </body>
 </html>
