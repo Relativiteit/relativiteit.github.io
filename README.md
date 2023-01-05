@@ -1,8 +1,8 @@
 # LandingPage
 
 LandingPage explore button and right hand corner overview of website 
-Extend with React 
-
+Extend with React 05-01-2023
+change
 ## TODO
 
 - Make home page
