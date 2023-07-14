@@ -62,8 +62,18 @@
 .logo{
     text-transform: uppercase;
     cursor: pointer;
-
 }
+
+.logo a {
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Inherits the color from the parent element */
+    display: inline; /* To maintain the inline nature of anchor tag */
+  }
+  
+  .logo a:hover {
+    text-decoration: none;
+    color: inherit;
+  }
 
 .toggle {
     position: relative;
