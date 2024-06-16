@@ -5,22 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>KantoRobotics Contact</title>
+    <title>Contact Us - KantoRobotics</title>
   </head>
   <body>
     <section class="showcase">
       <header>
-        <h2 class="logo"><a href="index.html">KantoRobotics</a></h2> <!-- wrapped text with anchor tag -->
+        <h2 class="logo"><a href="index.html">KantoRobotics</a></h2>
+        <!-- wrapped text with anchor tag -->
         <div class="toggle"></div>
       </header>
 
-    
-
       <div class="text">
         <h3>Contact Us</h3>
-        <p>
-          Please contact us for business inquiries or any other questions.
-        </p>
+        <p>Please contact us for business inquiries or any other questions.</p>
         <p id="email">Loading Email...</p>
       </div>
     </section>
@@ -30,6 +27,7 @@
         <li><a href="home.html">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="team.html">Team</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
@@ -39,17 +37,19 @@
       const domain = 'kantorobotics';
       const tld = 'jp';
 
-      document.getElementById('email').innerHTML = `You can reach us at: <a href="mailto:${name}@${domain}.${tld}">${name}"at"${domain}.${tld}</a>`;
+      document.getElementById(
+        'email'
+      ).innerHTML = `You can reach us at: <a href="mailto:${name}@${domain}.${tld}">${name}@${domain}.${tld}</a>`;
     </script>
-    
+
     <script>
-      const menuToggle = document.querySelector('.toggle')
-      const showcase = document.querySelector('.showcase')
+      const menuToggle = document.querySelector('.toggle');
+      const showcase = document.querySelector('.showcase');
 
       menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active')
-        showcase.classList.toggle('active')
-      })
+        menuToggle.classList.toggle('active');
+        showcase.classList.toggle('active');
+      });
     </script>
   </body>
 </html>

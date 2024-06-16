@@ -10,12 +10,10 @@
   <body>
     <section class="showcase">
       <header>
-        <h2 class="logo"><a href="index.html">KantoRobotics</a></h2> <!-- wrapped text with anchor tag -->
+        <h2 class="logo"><a href="index.html">KantoRobotics</a></h2>
         <div class="toggle"></div>
       </header>
-      <!-- background video -->
       <video src="KRVideo.mp4" playsinline muted loop autoplay></video>
-
       <div class="overlay"></div>
       <div class="text">
         <h2>Find Your Passion</h2>
@@ -25,54 +23,47 @@
           and AI. By giving you the tools you need to make this world a better
           place.
         </p>
-        <a href="projects.html">Explore</a>
+        <div class="buttons">
+          <a href="projects.html">Explore</a>
+          <a class="pink-button" href="https://snappy.kantorobotics.jp">
+            <img
+              src="snappytool.svg"
+              alt="SnappyTool Logo"
+              class="button-logo"
+            />
+            SnappyTool
+          </a>
+        </div>
       </div>
-      <!-- social media links -->
-      <!-- <ul class="social">
-        <li>
-          <a href="#"><img src="facebook.png" alt="" /></a>
-        </li>
-        <li>
-          <a href="#"><img src="twitter.png" alt="" /></a>
-        </li>
-        <li>
-          <a href="#"><img src="instagram.png" alt="" /></a>
-        </li>
-      </ul> -->
     </section>
-    <!-- html pages links -->
     <div class="menu">
       <ul>
         <li><a href="home.html">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="team.html">Team</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
-    <!-- toggle switch script -->
     <script>
-      const menuToggle = document.querySelector('.toggle')
-      const showcase = document.querySelector('.showcase')
+      const menuToggle = document.querySelector('.toggle');
+      const showcase = document.querySelector('.showcase');
 
       menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active')
-        showcase.classList.toggle('active')
-      })
+        menuToggle.classList.toggle('active');
+        showcase.classList.toggle('active');
+      });
     </script>
-    <!-- video script -->
     <script>
-      var myvid = document.getElementById('myvideo')
-      var myvids = ['fujiSideSlow.mp4', 'inakaSlow.mp4']
-      var activeVideo = 0
+      var myvid = document.getElementById('myvideo');
+      var myvids = ['fujiSideSlow.mp4', 'inakaSlow.mp4'];
+      var activeVideo = 0;
 
       myvid.addEventListener('ended', function (e) {
-        // update the new active video index
-        activeVideo = ++activeVideo % myvids.length
-
-        //update the video source and play
-        myvid.src = myvids[activeVideo]
-        myvid.play()
-      })
+        activeVideo = ++activeVideo % myvids.length;
+        myvid.src = myvids[activeVideo];
+        myvid.play();
+      });
     </script>
   </body>
 </html>

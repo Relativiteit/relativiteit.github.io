@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Meet the Team - KantoRobotics</title>
+  </head>
+  <body>
+    <section class="showcase">
+      <header>
+        <h2 class="logo"><a href="index.html">KantoRobotics</a></h2>
+        <div class="toggle"></div>
+      </header>
+
+      <div class="text">
+        <h3>Meet the Team</h3>
+        <div class="team-member">
+          <img src="alejoheadshot.jpg" alt="Alejo Cain" />
+          <div class="bio">
+            <h4>Alejo Cain</h4>
+            <p>
+              Co-Founder of KantoRobotics. Alejo is a software engineer with a
+              mechanical engineering degree and extensive experience in the
+              field of robotics. Passionate about making advanced technology
+              accessible to everyone.
+            </p>
+            <p>
+              <a
+                href="https://www.linkedin.com/in/alejo-cain-01310a86/"
+                target="_blank"
+                >LinkedIn</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="team-member">
+          <img src="algernonheadshot.jpg" alt="Algernon Ip Vai Ching" />
+          <div class="bio">
+            <h4>Algernon Ip Vai Ching</h4>
+            <p>
+              Co-Founder of KantoRobotics. Algernon has a background in software
+              engineering and extensive startup experience. He and Alejo have
+              been friends since childhood and share a passion for innovation
+              and technology.
+            </p>
+            <p>
+              <a
+                href="https://www.linkedin.com/in/algernon-ip-vai-ching-39591023/"
+                target="_blank"
+                >LinkedIn</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="menu">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- toggle switch script -->
+    <script>
+      const menuToggle = document.querySelector('.toggle');
+      const showcase = document.querySelector('.showcase');
+
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        showcase.classList.toggle('active');
+      });
+    </script>
+  </body>
+</html>

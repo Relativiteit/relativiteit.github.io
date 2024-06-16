@@ -10,19 +10,38 @@
   <body>
     <section class="showcase">
       <header>
-        <h2 class="logo"><a href="index.html">KantoRobotics</a></h2> <!-- wrapped text with anchor tag -->
+        <h2 class="logo"><a href="index.html">KantoRobotics</a></h2>
+        <!-- wrapped text with anchor tag -->
         <div class="toggle"></div>
       </header>
 
-    
-
       <div class="text">
-        <h3>The Story Behind KantoRobotics</h3>
-        <p>Our founder, once a full-time musician, discovered the world of engineering through TinkerCAD. This accessible tool didn't just introduce him to a new discipline, but also gifted him the courage to take a bold leap into mechanical engineering.</p>
-        <p>His journey with TinkerCAD led him to the university, where he cultivated lifelong friendships and further nurtured his newfound passion for engineering. Eventually, this passion took him to Japan, the land of the rising sun.</p>
-        <p>In Japan, he started creating innovative tools, using his engineering skills for more than just functional applications but also for artistic expressions. This journey wasn't just about acquiring new skills; it was a road to self-liberation.</p>
-        <p>With KantoRobotics, he aspires to offer the same empowerment by making robotics accessible to everyone, regardless of their background. His vision is to create a platform where anyone can design and bring robots to life right from their browser.</p>
-        <p>This dream, conceived from a tool that changed one life, now aims to inspire many more across the globe.</p>
+        <h3>Our Mission at KantoRobotics</h3>
+        <p>
+          At KantoRobotics, we believe in the power of technology to drive
+          positive change and human advancement. Our mission is to lower the
+          barriers to entry in robotics and make advanced technology accessible
+          to everyone.
+        </p>
+        <p>
+          We understand that passion is the key to innovation. By providing
+          intuitive and powerful tools like SnappyTool, we aim to inspire
+          creativity and help people turn their ideas into reality. SnappyTool,
+          our first offering, is a drag-and-drop robot builder that empowers
+          users to design and build robots directly in their browser.
+        </p>
+        <p>
+          With the help of AI, we strive to make the process of creating and
+          working with robotics not only more accessible but also enjoyable and
+          fulfilling. Our goal is to enable anyone, regardless of their
+          background or expertise, to explore their passions and create
+          beautiful, functional robots that can make a difference in the world.
+        </p>
+        <p>
+          KantoRobotics is more than just a company; it's a community of
+          innovators, dreamers, and creators. Join us on this journey to harness
+          the power of technology and make a positive impact on society.
+        </p>
         <div id="like_button_container"></div>
       </div>
     </section>
@@ -32,18 +51,19 @@
         <li><a href="home.html">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="team.html">Team</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
     <!-- toggle switch script -->
     <script>
-      const menuToggle = document.querySelector('.toggle')
-      const showcase = document.querySelector('.showcase')
+      const menuToggle = document.querySelector('.toggle');
+      const showcase = document.querySelector('.showcase');
 
       menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active')
-        showcase.classList.toggle('active')
-      })
+        menuToggle.classList.toggle('active');
+        showcase.classList.toggle('active');
+      });
     </script>
   </body>
 </html>
