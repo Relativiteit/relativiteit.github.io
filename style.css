@@ -167,6 +167,18 @@
     background: #ff85c0; /* Lighter pink on hover */
 }
 
+.blue-button {
+    display: flex;
+    align-items: center;
+    background: #03a9fa; /* Pink color for the button */
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+
+.blue-button:hover {
+    background: #03a9fa; /* Lighter pink on hover */
+}
 .button-logo {
     width: 40px;
     height: 20px;
