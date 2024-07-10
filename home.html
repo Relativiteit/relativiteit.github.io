@@ -10,53 +10,53 @@
   <body>
     <section class="showcase">
       <header>
-        <h2 class="logo"><a href="index.html">KantoRobotics</a></h2> <!-- wrapped text with anchor tag -->
+        <h2 class="logo"><a href="index.html">KantoRobotics</a></h2>
         <div class="toggle"></div>
       </header>
       <div class="overlay"></div>
 
       <div class="text">
-        <h3> Engineering the Future</h3>
-        <p> At KantoRobotics, we believe in the transformative power of technology. Our journey began with a simple yet revolutionary idea: to make robotics accessible for everyone. We were driven by the vision of a future where everyone can contribute to the fast-growing field of robotics, not just scientists or engineers. That's why we're currently developing an innovative, browser-based tool that allows anyone, regardless of their background, to create and interact with robots in a virtual environment. This tool is just a small part of our broader commitment to breaking down the barriers around robotics, opening up this exciting field to a new generation of innovators and creators. Here at KantoRobotics, we're not just building robots – we're empowering people to build their own</p>
-        <p>Find out more about our projects and the cutting-edge technology we are developing.</p>
-        <a href="projects.html">Projects</a>
-       
+        <h3>Engineering the Future</h3>
+        <p>
+          Welcome to KantoRobotics, where we are making robotics accessible to
+          everyone. Our innovative tool, SnappyTool, allows anyone to design and
+          interact with robots directly in their browser.
+        </p>
+        <p>
+          Discover our projects and see how we are breaking down barriers in the
+          field of robotics.
+        </p>
+        <div>
+          <a class="btn" href="projects.html">Explore Projects</a>
+        </div>
+        <div>
+          <a class="btn" href="services.html">Our Services</a>
+        </div>
+        <div>
+          <a class="btn" href="team.html">Our Team</a>
+        </div>
       </div>
     </section>
 
- 
-
-    <div class="projects">
-      <article>
-        <h2>Project 1</h2>
-        <p>Description of Project 1</p>
-        <a href="project1.html">Details</a>
-      </article>
-      <article>
-        <h2>Project 2</h2>
-        <p>Description of Project 2</p>
-        <a href="project2.html">Details</a>
-      </article>
-
-      <div class="menu">
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="team.html">Team</a></li> 
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
+    <div class="menu">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
 
     <script>
-      const menuToggle = document.querySelector('.toggle')
-      const showcase = document.querySelector('.showcase')
+      const menuToggle = document.querySelector('.toggle');
+      const showcase = document.querySelector('.showcase');
 
       menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active')
-        showcase.classList.toggle('active')
-      })
+        menuToggle.classList.toggle('active');
+        showcase.classList.toggle('active');
+      });
     </script>
   </body>
 </html>
