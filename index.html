@@ -12,10 +12,11 @@
       <header>
         <h2 class="logo"><a href="index.html">KantoRobotics</a></h2>
         <div class="toggle"></div>
+        <button id="language-switch" class="language-button">日本語</button>
       </header>
       <video src="KRVideo.mp4" playsinline muted loop autoplay></video>
       <div class="overlay"></div>
-      <div class="text">
+      <div class="text" id="text-content">
         <h2>Find Your Solution</h2>
         <h3>With The Help Of AI</h3>
         <p>
@@ -31,7 +32,7 @@
               alt="SnappyTool Logo"
               class="button-logo"
             />
-            SnappyTool
+            <span>SnappyTool</span>
           </a>
         </div>
       </div>
@@ -54,17 +55,45 @@
         menuToggle.classList.toggle('active');
         showcase.classList.toggle('active');
       });
-    </script>
-    <script>
-      var myvid = document.getElementById('myvideo');
-      var myvids = ['fujiSideSlow.mp4', 'inakaSlow.mp4'];
-      var activeVideo = 0;
 
-      myvid.addEventListener('ended', function (e) {
-        activeVideo = ++activeVideo % myvids.length;
-        myvid.src = myvids[activeVideo];
-        myvid.play();
+      const languageButton = document.getElementById('language-switch');
+      const textContent = document.getElementById('text-content');
+
+      const englishContent = {
+        h2: 'Find Your Solution',
+        h3: 'With The Help Of AI',
+        p: 'Welcome to Kanto Robotics, where innovation meets excellence. Our expert team delivers top-tier software solutions to enhance your business.',
+        services: 'Our Services',
+        snappytool: 'SnappyTool',
+      };
+
+      const japaneseContent = {
+        h2: '解決策を見つける',
+        h3: 'AIの助けを借りて',
+        p: '革新が卓越性に出会う場所、関東ロボティクスへようこそ。私たちの専門チームは、ビジネスを強化するために最高のソフトウェアソリューションを提供します。',
+        services: '私たちのサービス',
+        snappytool: 'スナッピーツール',
+      };
+
+      languageButton.addEventListener('click', () => {
+        if (languageButton.textContent === '日本語') {
+          languageButton.textContent = 'English';
+          updateContent(japaneseContent);
+        } else {
+          languageButton.textContent = '日本語';
+          updateContent(englishContent);
+        }
       });
+
+      function updateContent(content) {
+        textContent.querySelector('h2').textContent = content.h2;
+        textContent.querySelector('h3').textContent = content.h3;
+        textContent.querySelector('p').textContent = content.p;
+        textContent.querySelector('.blue-button').textContent =
+          content.services;
+        textContent.querySelector('.pink-button span').textContent =
+          content.snappytool;
+      }
     </script>
   </body>
 </html>

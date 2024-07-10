@@ -11,11 +11,11 @@
     <section class="showcase">
       <header>
         <h2 class="logo"><a href="index.html">KantoRobotics</a></h2>
-        <!-- wrapped text with anchor tag -->
         <div class="toggle"></div>
+        <button id="language-switch" class="language-button">日本語</button>
       </header>
 
-      <div class="text">
+      <div class="text" id="contact-content">
         <h3>Contact Us</h3>
         <p>Please contact us for business inquiries or any other questions.</p>
         <p id="email">Loading Email...</p>
@@ -51,6 +51,38 @@
         menuToggle.classList.toggle('active');
         showcase.classList.toggle('active');
       });
+
+      const languageButton = document.getElementById('language-switch');
+      const contactContent = document.getElementById('contact-content');
+
+      const englishContent = {
+        title: 'Contact Us',
+        p1: 'Please contact us for business inquiries or any other questions.',
+        emailText: 'You can reach us at:',
+      };
+
+      const japaneseContent = {
+        title: 'お問い合わせ',
+        p1: 'ビジネスのお問い合わせやその他の質問については、お問い合わせください。',
+        emailText: 'こちらのメールアドレスにご連絡ください:',
+      };
+
+      languageButton.addEventListener('click', () => {
+        if (languageButton.textContent === '日本語') {
+          languageButton.textContent = 'English';
+          updateContent(japaneseContent);
+        } else {
+          languageButton.textContent = '日本語';
+          updateContent(englishContent);
+        }
+      });
+
+      function updateContent(content) {
+        contactContent.querySelector('h3').textContent = content.title;
+        const paragraphs = contactContent.querySelectorAll('p');
+        paragraphs[0].textContent = content.p1;
+        paragraphs[1].innerHTML = `${content.emailText} <a href="mailto:${name}@${domain}.${tld}">${name}@${domain}.${tld}</a>`;
+      }
     </script>
   </body>
 </html>

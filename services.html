@@ -23,9 +23,10 @@
       <header>
         <h6 class="logo"><a href="index.html">KantoRobotics</a></h6>
         <div class="toggle"></div>
+        <button id="language-switch" class="language-button">日本語</button>
       </header>
 
-      <section class="service-grid pb-5 pt-5">
+      <section class="service-grid pb-5 pt-5" id="services-content">
         <div class="container">
           <div class="row">
             <div class="col-xl-12 text-center mb-4">
@@ -123,6 +124,123 @@
           menuToggle.classList.toggle('active');
           showcase.classList.toggle('active');
         });
+
+        const languageButton = document.getElementById('language-switch');
+        const servicesContent = document.getElementById('services-content');
+
+        const englishContent = {
+          services: 'Our Services',
+          customSoftware: 'Custom Software Development',
+          webMobile: 'Web and mobile applications',
+          enterprise: 'Enterprise solutions',
+          aiMl: 'AI and Machine Learning',
+          predictive: 'Predictive analytics',
+          automation: 'Intelligent automation',
+          genAI: 'GenAI applications',
+          dataAnalytics: 'Data Analytics',
+          visualization: 'Data visualization',
+          businessIntelligence: 'Business intelligence',
+          cloudSolutions: 'Cloud Solutions',
+          awsGcpAzure: 'AWS, GCP, Azure integration',
+          scalable: 'Scalable infrastructure',
+          devOps: 'DevOps practices',
+          cybersecurity: 'Cybersecurity',
+          itRisk: 'IT risk management',
+          dataProtection: 'Data protection',
+          compliance: 'Compliance services',
+          uiUx: 'UI/UX Design',
+          userCentered: 'User-centered design',
+          prototyping: 'Prototyping and testing',
+          userExperiences: 'Engaging user experiences',
+        };
+
+        const japaneseContent = {
+          services: '私たちのサービス',
+          customSoftware: 'カスタムソフトウェア開発',
+          webMobile: 'ウェブおよびモバイルアプリケーション',
+          enterprise: '企業向けソリューション',
+          aiMl: 'AIと機械学習',
+          predictive: '予測分析',
+          automation: 'インテリジェントオートメーション',
+          genAI: 'GenAIアプリケーション',
+          dataAnalytics: 'データ分析',
+          visualization: 'データ可視化',
+          businessIntelligence: 'ビジネスインテリジェンス',
+          cloudSolutions: 'クラウドソリューション',
+          awsGcpAzure: 'AWS、GCP、Azureの統合',
+          scalable: 'スケーラブルなインフラ',
+          devOps: 'DevOpsの実践',
+          cybersecurity: 'サイバーセキュリティ',
+          itRisk: 'ITリスク管理',
+          dataProtection: 'データ保護',
+          compliance: 'コンプライアンスサービス',
+          uiUx: 'UI/UXデザイン',
+          userCentered: 'ユーザー中心のデザイン',
+          prototyping: 'プロトタイピングとテスト',
+          userExperiences: '魅力的なユーザー体験',
+        };
+
+        languageButton.addEventListener('click', () => {
+          if (languageButton.textContent === '日本語') {
+            languageButton.textContent = 'English';
+            updateContent(japaneseContent);
+          } else {
+            languageButton.textContent = '日本語';
+            updateContent(englishContent);
+          }
+        });
+
+        function updateContent(content) {
+          servicesContent.querySelector('.service-title h4').textContent =
+            content.services;
+          const serviceWraps =
+            servicesContent.querySelectorAll('.service-wrap');
+
+          serviceWraps[0].querySelector('h4').textContent =
+            content.customSoftware;
+          serviceWraps[0].querySelectorAll('p')[0].textContent =
+            content.webMobile;
+          serviceWraps[0].querySelectorAll('p')[1].textContent =
+            content.enterprise;
+
+          serviceWraps[1].querySelector('h4').textContent = content.aiMl;
+          serviceWraps[1].querySelectorAll('p')[0].textContent =
+            content.predictive;
+          serviceWraps[1].querySelectorAll('p')[1].textContent =
+            content.automation;
+          serviceWraps[1].querySelectorAll('p')[2].textContent = content.genAI;
+
+          serviceWraps[2].querySelector('h4').textContent =
+            content.dataAnalytics;
+          serviceWraps[2].querySelectorAll('p')[0].textContent =
+            content.visualization;
+          serviceWraps[2].querySelectorAll('p')[1].textContent =
+            content.businessIntelligence;
+
+          serviceWraps[3].querySelector('h4').textContent =
+            content.cloudSolutions;
+          serviceWraps[3].querySelectorAll('p')[0].textContent =
+            content.awsGcpAzure;
+          serviceWraps[3].querySelectorAll('p')[1].textContent =
+            content.scalable;
+          serviceWraps[3].querySelectorAll('p')[2].textContent = content.devOps;
+
+          serviceWraps[4].querySelector('h4').textContent =
+            content.cybersecurity;
+          serviceWraps[4].querySelectorAll('p')[0].textContent = content.itRisk;
+          serviceWraps[4].querySelectorAll('p')[1].textContent =
+            content.dataProtection;
+          serviceWraps[4].querySelectorAll('p')[2].textContent =
+            content.compliance;
+
+          serviceWraps[5].querySelector('h4').textContent = content.uiUx;
+          serviceWraps[5].querySelectorAll('p')[0].textContent =
+            content.userCentered;
+          serviceWraps[5].querySelectorAll('p')[1].textContent =
+            content.prototyping;
+          serviceWraps[5].querySelectorAll('p')[2].textContent =
+            content.userExperiences;
+        }
       </script>
     </section>
     <script

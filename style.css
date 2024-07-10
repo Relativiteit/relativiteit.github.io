@@ -305,3 +305,23 @@
     text-decoration: none;
 }
 
+.language-button {
+    background-color: #fff;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1em;
+    transition: background-color 0.2s, letter-spacing 0.2s;
+    position: absolute;
+    right: 160px;
+    top: 50px;
+  }
+  
+  .language-button:hover {
+    background-color: #0291d1;
+    letter-spacing: 4px;
+  }
+  

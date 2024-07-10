@@ -12,10 +12,10 @@
       <header>
         <h2 class="logo"><a href="index.html">KantoRobotics</a></h2>
         <div class="toggle"></div>
+        <button id="language-switch" class="language-button">日本語</button>
       </header>
       <div class="overlay"></div>
-
-      <div class="text">
+      <div class="text" id="text-content">
         <h3>Engineering the Future</h3>
         <p>
           Welcome to KantoRobotics, where we are making robotics accessible to
@@ -28,14 +28,11 @@
         </p>
         <div class="buttons">
           <a class="btn" href="projects.html">Explore Projects</a>
-
           <a class="blue-button" href="services.html">Our Services</a>
-
           <a class="btn" href="team.html">Our Team</a>
         </div>
       </div>
     </section>
-
     <div class="menu">
       <ul>
         <li><a href="home.html">Home</a></li>
@@ -46,7 +43,6 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
-
     <script>
       const menuToggle = document.querySelector('.toggle');
       const showcase = document.querySelector('.showcase');
@@ -55,6 +51,49 @@
         menuToggle.classList.toggle('active');
         showcase.classList.toggle('active');
       });
+
+      const languageButton = document.getElementById('language-switch');
+      const textContent = document.getElementById('text-content');
+
+      const englishContent = {
+        h3: 'Engineering the Future',
+        p1: 'Welcome to KantoRobotics, where we are making robotics accessible to everyone. Our innovative tool, SnappyTool, allows anyone to design and interact with robots directly in their browser.',
+        p2: 'Discover our projects and see how we are breaking down barriers in the field of robotics.',
+        explore: 'Explore Projects',
+        services: 'Our Services',
+        team: 'Our Team',
+      };
+
+      const japaneseContent = {
+        h3: '未来を築く',
+        p1: 'KantoRoboticsへようこそ。私たちは、ロボット工学を誰にでもアクセス可能にすることを目指しています。革新的なツールであるSnappyToolを使用すると、誰でもブラウザ上でロボットを設計し、対話することができます。',
+        p2: '私たちのプロジェクトを発見し、ロボット工学の分野でどのように障壁を打破しているかをご覧ください。',
+        explore: 'プロジェクトを見る',
+        services: '私たちのサービス',
+        team: '私たちのチーム',
+      };
+
+      languageButton.addEventListener('click', () => {
+        if (languageButton.textContent === '日本語') {
+          languageButton.textContent = 'English';
+          updateContent(japaneseContent);
+        } else {
+          languageButton.textContent = '日本語';
+          updateContent(englishContent);
+        }
+      });
+
+      function updateContent(content) {
+        textContent.querySelector('h3').textContent = content.h3;
+        textContent.querySelectorAll('p')[0].textContent = content.p1;
+        textContent.querySelectorAll('p')[1].textContent = content.p2;
+        textContent.querySelector('.buttons .btn:nth-child(1)').textContent =
+          content.explore;
+        textContent.querySelector('.buttons .blue-button').textContent =
+          content.services;
+        textContent.querySelector('.buttons .btn:nth-child(3)').textContent =
+          content.team;
+      }
     </script>
   </body>
 </html>

@@ -12,9 +12,10 @@
       <header>
         <h2 class="logo"><a href="index.html">KantoRobotics</a></h2>
         <div class="toggle"></div>
+        <button id="language-switch" class="language-button">日本語</button>
       </header>
 
-      <div class="text team-text">
+      <div class="text team-text" id="team-content">
         <h3>Meet the Team</h3>
         <div class="team-member">
           <div class="bio">
@@ -91,6 +92,79 @@
         menuToggle.classList.toggle('active');
         showcase.classList.toggle('active');
       });
+
+      const languageButton = document.getElementById('language-switch');
+      const teamContent = document.getElementById('team-content');
+
+      const englishContent = {
+        title: 'Meet the Team',
+        coFounder1Title: 'Co-Founder',
+        coFounder1Bio:
+          'Co-Founder and Data Engineer. Alejo is a software engineer with a mechanical engineering degree and extensive experience in robotics. Passionate about making advanced technology accessible to everyone.',
+        coFounder2Title: 'Co-Founder',
+        coFounder2Bio:
+          'With a strong background in software engineering and startup experience, our co-founder is instrumental in driving innovation and technology development at KantoRobotics.',
+        cfoTitle: 'Chief Financial Officer',
+        cfoBio:
+          'Our CFO brings extensive experience in compliance and governance. As a seasoned financial professional and IT audit expert, they ensure that all solutions meet regulatory standards and financial best practices.',
+        embeddedTitle: 'Embedded Systems Engineer',
+        embeddedBio:
+          'Specializing in the integration of mechanical, electronic, and software systems, our embedded systems engineer is key to our advanced robotics solutions.',
+        uxUiTitle: 'UX/UI Designer',
+        uxUiBio:
+          'Focused on creating intuitive and engaging user experiences, our UX/UI designer ensures our products are user-friendly and aesthetically pleasing.',
+      };
+
+      const japaneseContent = {
+        title: 'チーム紹介',
+        coFounder1Title: '共同創設者',
+        coFounder1Bio:
+          '共同創設者兼データエンジニア。Alejoは、機械工学の学位を持つソフトウェアエンジニアであり、ロボティクスの豊富な経験を持っています。先進技術を誰もが利用できるようにすることに情熱を注いでいます。',
+        coFounder2Title: '共同創設者',
+        coFounder2Bio:
+          'ソフトウェアエンジニアリングとスタートアップの経験を持つ私たちの共同創設者は、KantoRoboticsでのイノベーションと技術開発を推進する上で重要な役割を果たしています。',
+        cfoTitle: '最高財務責任者',
+        cfoBio:
+          '私たちのCFOは、コンプライアンスとガバナンスの豊富な経験を持っています。経験豊富な財務専門家およびIT監査の専門家として、すべてのソリューションが規制基準および財務のベストプラクティスを満たすことを保証します。',
+        embeddedTitle: '組み込みシステムエンジニア',
+        embeddedBio:
+          '機械、電子、ソフトウェアシステムの統合を専門とする私たちの組み込みシステムエンジニアは、当社の高度なロボティクスソリューションにとって重要な存在です。',
+        uxUiTitle: 'UX/UIデザイナー',
+        uxUiBio:
+          '直感的で魅力的なユーザーエクスペリエンスを作成することに焦点を当てた私たちのUX/UIデザイナーは、製品がユーザーフレンドリーで美しく見えることを保証します。',
+      };
+
+      languageButton.addEventListener('click', () => {
+        if (languageButton.textContent === '日本語') {
+          languageButton.textContent = 'English';
+          updateContent(japaneseContent);
+        } else {
+          languageButton.textContent = '日本語';
+          updateContent(englishContent);
+        }
+      });
+
+      function updateContent(content) {
+        teamContent.querySelector('h3').textContent = content.title;
+        const teamMembers = teamContent.querySelectorAll('.team-member');
+
+        teamMembers[0].querySelector('h4').textContent =
+          content.coFounder1Title;
+        teamMembers[0].querySelector('p').textContent = content.coFounder1Bio;
+
+        teamMembers[1].querySelector('h4').textContent =
+          content.coFounder2Title;
+        teamMembers[1].querySelector('p').textContent = content.coFounder2Bio;
+
+        teamMembers[2].querySelector('h4').textContent = content.cfoTitle;
+        teamMembers[2].querySelector('p').textContent = content.cfoBio;
+
+        teamMembers[3].querySelector('h4').textContent = content.embeddedTitle;
+        teamMembers[3].querySelector('p').textContent = content.embeddedBio;
+
+        teamMembers[4].querySelector('h4').textContent = content.uxUiTitle;
+        teamMembers[4].querySelector('p').textContent = content.uxUiBio;
+      }
     </script>
   </body>
 </html>

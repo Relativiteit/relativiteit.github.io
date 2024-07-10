@@ -8,32 +8,29 @@
     <title>KantoRobotics</title>
   </head>
   <body>
-    <section class="showcase" >
+    <section class="showcase">
       <header>
-        <h2 class="logo"><a href="index.html">KantoRobotics</a></h2> <!-- wrapped text with anchor tag -->
-
+        <h2 class="logo"><a href="index.html">KantoRobotics</a></h2>
         <div class="toggle"></div>
+        <button id="language-switch" class="language-button">日本語</button>
       </header>
       <div class="overlay"></div>
 
-      <div class="text">
-        <h3>Current projects</h2>
-        <a class="pink-button" href="https://snappytool.kantorobotics.jp">SnappyTool
-          <img
-          src="snappytool.svg"
-          alt="SnappyTool Logo"
-          class="button-logo"
-        />
+      <div class="text" id="text-content">
+        <h3>Current projects</h3>
+        <a class="pink-button" href="https://snappytool.kantorobotics.jp"
+          >SnappyTool
+          <img src="snappytool.svg" alt="SnappyTool Logo" class="button-logo" />
         </a>
       </div>
 
-       
-       
-      
-      <div class="builder-announcement">
+      <div class="builder-announcement" id="announcement-content">
         <h2>Exciting Updates!</h2>
-        <p>We're currently working on building a new application: a drag and drop robot builder. You can learn more about this project snappytool.kantorobotics.jp</p>
-        
+        <p>
+          We're currently working on building a new application: a drag and drop
+          robot builder. You can learn more about this project at
+          snappytool.kantorobotics.jp
+        </p>
       </div>
     </section>
 
@@ -43,19 +40,57 @@
         <li><a href="projects.html">Projects</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="team.html">Team</a></li> 
+        <li><a href="team.html">Team</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
 
     <script>
-      const menuToggle = document.querySelector('.toggle')
-      const showcase = document.querySelector('.showcase')
+      const menuToggle = document.querySelector('.toggle');
+      const showcase = document.querySelector('.showcase');
 
       menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active')
-        showcase.classList.toggle('active')
-      })
+        menuToggle.classList.toggle('active');
+        showcase.classList.toggle('active');
+      });
+
+      const languageButton = document.getElementById('language-switch');
+      const textContent = document.getElementById('text-content');
+      const announcementContent = document.getElementById(
+        'announcement-content'
+      );
+
+      const englishContent = {
+        h3: 'Projects',
+        snappytool: 'SnappyTool',
+        updates: 'Exciting Updates!',
+        p: "We're currently working on building a new application: a drag and drop robot builder. You can learn more about this project at snappytool.kantorobotics.jp",
+      };
+
+      const japaneseContent = {
+        h3: 'プロジェクト',
+        snappytool: 'スナッピーツール',
+        updates: 'エキサイティングな更新！',
+        p: '現在、ドラッグアンドドロップのロボットビルダーという新しいアプリケーションの構築に取り組んでいます。このプロジェクトについて詳しくは、snappytool.kantorobotics.jpをご覧ください。',
+      };
+
+      languageButton.addEventListener('click', () => {
+        if (languageButton.textContent === '日本語') {
+          languageButton.textContent = 'English';
+          updateContent(japaneseContent);
+        } else {
+          languageButton.textContent = '日本語';
+          updateContent(englishContent);
+        }
+      });
+
+      function updateContent(content) {
+        textContent.querySelector('h3').textContent = content.h3;
+        textContent.querySelector('.pink-button').childNodes[0].textContent =
+          content.snappytool + ' ';
+        announcementContent.querySelector('h2').textContent = content.updates;
+        announcementContent.querySelector('p').textContent = content.p;
+      }
     </script>
   </body>
 </html>
