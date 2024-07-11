@@ -325,3 +325,13 @@
     letter-spacing: 4px;
   }
   
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .partner-logo {
+    margin-left: 20px;
+    height: 40px; /* Adjust the height as necessary */
+  }
+  
